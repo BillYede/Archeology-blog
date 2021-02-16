@@ -1,12 +1,7 @@
-import React from 'react';
-import Reactdom from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const App = () => {
-  return (
-    <div>
-      <h2>Play</h2>
-    </div>
-  )
-}
- 
-ReactDOM.render(<App />,document.getElementById('root'));
+ReactDOM.render(
+    React.createElement('div', null, `Complete Guide to Webpack Configuration for React`),
+    document.getElementById('app')
+)
