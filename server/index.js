@@ -1,10 +1,9 @@
-const express = require('express')
-const app = express()
+const app = require('express')();
 
-app.get('/', function(req, res) {
-    res.send('Hello World')
-})
+app.get('/', (req, res) =>
+    res.json({ message: 'Docker is easy 🐳' })
+);
 
-app.listen(3000)
+const port = process.env.PORT || 8080;
 
-const port = process.env.PORT || 3000
+app.listen(port, () => console.log(`app listening on http://localhost:${port}`));
