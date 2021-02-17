@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import "../src/scss/style.css"
+import App from './components/App'
 
-ReactDOM.render(
-    React.createElement('div', null, `Complete Guide to Webpack Configuration for React`),
+if (module.hot) module.hot.accept()
+
+ReactDOM.render( <App/> ,
     document.getElementById('app')
 )

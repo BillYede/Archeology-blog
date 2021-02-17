@@ -1,8 +1,11 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack")
 
 
 module.exports = {
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+      ],
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         path: path.join(__dirname, 'dist'),
@@ -31,7 +34,11 @@ module.exports = {
                     ]
                 }
             }]
-
-        }]
+        },
+        {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"]
+        }
+    ]
     }
 }
