@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import "../src/scss/style.css"
+import "../src/scss/style.scss"
 import App from './components/App'
 
 if (module.hot) module.hot.accept()
